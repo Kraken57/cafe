@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bug, LoaderPinwheel } from "lucide-react";
+import { LoaderPinwheel } from "lucide-react";
 
 export const LoadingScreen = () => {
   return (
