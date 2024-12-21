@@ -10,7 +10,7 @@ import Azure from "../assets/azure.svg";
 
 const LoginSection = () => {
   const [mode, setMode] = useState<"saas" | "self-hosted">("saas");
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
   const handleSignIn = (provider: string) => {
     navigate("/repositories");

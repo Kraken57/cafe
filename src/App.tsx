@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { SignIn } from "./pages/SignIn";
+import { Repositories } from "./pages/Repositories";
 import { LoadingScreen } from "./components/LoadingScreen";
 
 const App = () => {
@@ -17,12 +18,13 @@ const App = () => {
 
   return (
     <Router>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingScreen />
         ) : (
           <Routes>
             <Route path="/" element={<SignIn />} />
+            <Route path="/repositories" element={<Repositories />} />
           </Routes>
         )}
       </AnimatePresence>
