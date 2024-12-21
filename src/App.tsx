@@ -1,13 +1,33 @@
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import { SignIn } from "./pages/SignIn";
-import "./index.css";
+import { LoadingScreen } from "./components/LoadingScreen";
 
-export default function App() {
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<SignIn />} />
-      </Routes>
+      <AnimatePresence>
+        {isLoading ? (
+          <LoadingScreen />
+        ) : (
+          <Routes>
+            <Route path="/" element={<SignIn />} />
+          </Routes>
+        )}
+      </AnimatePresence>
     </Router>
   );
-}
+};
+
+export default App;

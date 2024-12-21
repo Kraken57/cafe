@@ -44,9 +44,9 @@ const SideCard: React.FC<SideCardProps> = () => {
         </div>
       </div>
 
-      <div className="absolute flex flex-col justify-between z-10 bg-white bottom-0 right-0 translate-y-[90%] w-[265px] h-[164px] translate-x-[10%] shadow-xl border rounded-3xl p-4">
+      <div className="absolute flex flex-col justify-between z-10 bg-white bottom-0 right-0 translate-y-[90%] w-[265px] h-[164px] translate-x-[10%] shadow-xl border rounded-3xl p-7">
         <div className="flex justify-between items-center">
-          <div className="rounded-full p-4 bg-[#9D90FA]/25">
+          <div className="rounded-full p-3 bg-[#9D90FA]/25">
             <img src={PieChartImage} alt="Pie Chart" width={24} height={24} />
           </div>
           <div className="flex flex-col text-xs">
@@ -57,8 +57,7 @@ const SideCard: React.FC<SideCardProps> = () => {
             This Week
           </div>
         </div>
-
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col">
           <span className="text-sm font-bold">Issues Fixed</span>
           <span className="text-[#081735] text-3xl font-bold">
             <CountUp start={0} end={500} duration={2} separator="," />
