@@ -21,7 +21,10 @@ export const Sidebar = () => {
     <aside className="w-64 bg-white border-r border-gray-200 p-4">
       <div className="flex flex-col h-full">
         <div className="mb-6">
-          <img src={Logo} alt="Logo" />
+          <div className="text-3xl gap-3 flex items-center">
+            <img src={Logo} alt="Logo" width={40} height={40} />
+            CodeAnt AI
+          </div>
         </div>
 
         <div className="relative mb-4">
