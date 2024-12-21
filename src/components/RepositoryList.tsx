@@ -25,7 +25,7 @@ export const RepositoryList = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
-          className="p-4 bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-all hover:shadow-sm cursor-pointer"
+          className="p-4 bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-all hover:shadow-lg hover:scale-105 cursor-pointer transform"
         >
           <div className="flex items-center justify-between">
             <div>
