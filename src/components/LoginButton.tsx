@@ -12,7 +12,7 @@ export const SignInButton = ({
   return (
     <motion.button
       onClick={onClick}
-      className="flex items-center w-full px-4 py-3 rounded-md text-sm font-medium bg-gray-100 hover:bg-gray-200 transition-all focus:outline-none"
+      className="flex items-center justify-center w-full px-4 py-3 rounded-md text-sm font-medium bg-gray-100 hover:bg-gray-200 transition-all focus:outline-none"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ export const SignInButton = ({
       transition={{ duration: 0.2 }}
     >
       <span className="mr-3">{icon}</span>
-      {label}
+      <span>{label}</span>
     </motion.button>
   );
 };

@@ -8,7 +8,7 @@ export const SignIn = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.6 }} // Slightly longer duration for smoother transition
       className="flex items-center justify-center h-full min-h-screen w-full bg-white"
     >
       {/* Left Section */}
@@ -24,8 +24,13 @@ export const SignIn = () => {
       </div>
 
       {/* Right Section */}
-      <div className="container flex-1 flex flex-col justify-center items-center min-h-screen gap-8 p-4">
-        <div className="border rounded-xl flex flex-col items-center w-full h-[600px] shadow-sm max-w-xl">
+      <motion.div
+        className="container flex-1 flex flex-col justify-center items-center min-h-screen gap-8 p-4 bg-[#FAFAFA]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }} // Adding animation for right section fade-in
+      >
+        <div className="border rounded-xl flex flex-col items-center w-full h-[600px] shadow-sm max-w-xl bg-white">
           {/* Header Section */}
           <div className="px-4 py-8 w-full flex flex-col items-center justify-center gap-6 border-b">
             <div className="flex flex-col items-center">
@@ -45,12 +50,12 @@ export const SignIn = () => {
 
         <div className="text-sm">
           By signing up you agree to the{" "}
-          <a href="/privacy-policy" className="text-blue-600 hover:underline">
+          <a href="/" className="text-black hover:underline font-bold">
             Privacy Policy
           </a>
           .
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

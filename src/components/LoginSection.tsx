@@ -10,7 +10,7 @@ import Azure from "../assets/azure.svg";
 
 const LoginSection = () => {
   const [mode, setMode] = useState<"saas" | "self-hosted">("saas");
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSignIn = (provider: string) => {
     navigate("/repositories");
@@ -18,21 +18,30 @@ const LoginSection = () => {
   };
 
   return (
-    <div className="bg-white flex items-center justify-center p-4">
-      {/* Removed min-h-screen to avoid full-height white space */}
+    <motion.div
+      className="bg-white flex items-center justify-center p-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
       <motion.div
         className="w-full max-w-md"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.6 }}
       >
         <div className="bg-white rounded-2xl p-1">
-          <div className="flex mb-8 bg-gray-100 p-1 rounded-lg">
+          <motion.div
+            className="flex mb-8 bg-gray-100 p-1 w-96 rounded-lg"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}
+          >
             <button
               onClick={() => setMode("saas")}
-              className={`flex-1 py-2 px-4 rounded-md transition-all ${
+              className={`flex-1 py-4 rounded-md text-xl font-bold transition-all ${
                 mode === "saas"
-                  ? "bg-white text-blue-600 shadow-sm"
+                  ? "bg-white text-blue-600 shadow-sm "
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -40,7 +49,7 @@ const LoginSection = () => {
             </button>
             <button
               onClick={() => setMode("self-hosted")}
-              className={`flex-1 py-2 px-4 rounded-md transition-all ${
+              className={`flex-1 py-4 px-4 rounded-md text-xl font-bold transition-all ${
                 mode === "self-hosted"
                   ? "bg-white text-blue-600 shadow-sm"
                   : "text-gray-600 hover:text-gray-900"
@@ -48,9 +57,14 @@ const LoginSection = () => {
             >
               Self Hosted
             </button>
-          </div>
+          </motion.div>
 
-          <div className="space-y-3">
+          <motion.div
+            className="space-y-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }} // Button reveal transition
+          >
             {mode === "saas" ? (
               <>
                 <SignInButton
@@ -98,10 +112,10 @@ const LoginSection = () => {
                 />
               </>
             )}
-          </div>
+          </motion.div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

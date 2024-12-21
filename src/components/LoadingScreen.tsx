@@ -37,7 +37,6 @@ export const LoadingScreen = () => {
           Loading CodeAnt AI...
         </motion.div>
 
-        {/* Compact Loading Bar */}
         <motion.div
           className="mt-4 w-32 h-1 bg-gray-300 rounded-full"
           initial={{ width: "0%" }}

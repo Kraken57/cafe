@@ -2,6 +2,7 @@ import { Circle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Repository } from "../hooks/useRepositories";
 import { languageColors } from "../utils/languageColors.ts";
+import DatabaseLogo from "../assets/database.svg";
 
 interface RepositoryListProps {
   repositories: Repository[];
@@ -60,7 +61,15 @@ export const RepositoryList = ({
                   />
                   {repo.language}
                 </span>
-                <span>{repo.size}</span>
+                <div className="flex items-center gap-1">
+                  <img
+                    src={DatabaseLogo}
+                    alt="Database Logo"
+                    className="w-3 h-3"
+                  />
+                  <span>{repo.size}</span>
+                </div>
+
                 <span>Updated {repo.updatedAt}</span>
               </div>
             </div>
