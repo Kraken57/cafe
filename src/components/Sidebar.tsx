@@ -17,8 +17,8 @@ export const Sidebar = ({ onClose }: SidebarProps) => {
   const navigate = useNavigate();
 
   const handleNavigation = (path: string) => {
-    if (path !== "/") {
-      navigate("/repositories");
+    if (path !== "/cafe/") {
+      navigate("/cafe/repositories");
     } else {
       navigate(path);
     }
