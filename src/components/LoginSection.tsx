@@ -13,7 +13,7 @@ const LoginSection = () => {
   const navigate = useNavigate();
 
   const handleSignIn = (provider: string) => {
-    navigate("/repositories");
+    navigate("/cafe/repositories");
     console.log(`Sign in with ${provider}`);
   };
 
@@ -63,7 +63,7 @@ const LoginSection = () => {
             className="space-y-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }} 
+            transition={{ duration: 0.6 }}
           >
             {mode === "saas" ? (
               <>

@@ -56,27 +56,27 @@ export const Sidebar = ({ onClose }: SidebarProps) => {
           <SidebarLink
             icon={<img src={Home} alt="Home" className="w-5 h-5" />}
             label="Repositories"
-            onClick={() => handleNavigation("/repositories")}
+            onClick={() => handleNavigation("/cafe/repositories")}
           />
           <SidebarLink
             icon={<img src={Code} alt="Code" className="w-5 h-5" />}
             label="AI Code Review"
-            onClick={() => handleNavigation("/code-review")}
+            onClick={() => handleNavigation("/cafe/code-review")}
           />
           <SidebarLink
             icon={<img src={Cloud} alt="Cloud" className="w-5 h-5" />}
             label="Cloud Security"
-            onClick={() => handleNavigation("/security")}
+            onClick={() => handleNavigation("/cafe/security")}
           />
           <SidebarLink
             icon={<img src={Book} alt="Book" className="w-5 h-5" />}
             label="How to Use"
-            onClick={() => handleNavigation("/guide")}
+            onClick={() => handleNavigation("/cafe/guide")}
           />
           <SidebarLink
             icon={<img src={Gear} alt="Gear" className="w-5 h-5" />}
             label="Settings"
-            onClick={() => handleNavigation("/settings")}
+            onClick={() => handleNavigation("/cafe/settings")}
           />
         </nav>
 
@@ -84,12 +84,12 @@ export const Sidebar = ({ onClose }: SidebarProps) => {
           <SidebarLink
             icon={<img src={Help} alt="Help" className="w-5 h-5" />}
             label="Support"
-            onClick={() => handleNavigation("/support")}
+            onClick={() => handleNavigation("/cafe/support")}
           />
           <SidebarLink
             icon={<img src={Logout} alt="Logout" className="w-5 h-5" />}
             label="Logout"
-            onClick={() => handleNavigation("/")}
+            onClick={() => handleNavigation("/cafe/")}
           />
         </div>
       </div>

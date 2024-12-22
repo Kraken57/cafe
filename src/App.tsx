@@ -23,8 +23,8 @@ const App = () => {
           <LoadingScreen />
         ) : (
           <Routes>
-            <Route path="/" element={<SignIn />} />
-            <Route path="/repositories" element={<Repositories />} />
+            <Route path="/cafe" element={<SignIn />} />
+            <Route path="/cafe/repositories" element={<Repositories />} />
           </Routes>
         )}
       </AnimatePresence>
