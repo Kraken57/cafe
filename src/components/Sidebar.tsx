@@ -1,13 +1,13 @@
 import Logo from "../assets/logo.svg";
 import { ChevronDown, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Home from "../assets/sidebar/home.svg";
-import Code from "../assets/sidebar/code.svg";
-import Cloud from "../assets/sidebar/cloud.svg";
-import Book from "../assets/sidebar/book.svg";
-import Gear from "../assets/sidebar/gear.svg";
-import Help from "../assets/sidebar/help.svg";
-import Logout from "../assets/sidebar/logout.svg";
+import Home from "../assets/home.svg";
+import Code from "../assets/code.svg";
+import Cloud from "../assets/cloud.svg";
+import Book from "../assets/book.svg";
+import Gear from "../assets/gear.svg";
+import Help from "../assets/help.svg";
+import Logout from "../assets/logout.svg";
 
 interface SidebarProps {
   onClose?: () => void;
