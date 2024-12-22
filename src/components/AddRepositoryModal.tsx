@@ -79,7 +79,10 @@ export const AddRepositoryModal = ({
               </div>
 
               <div>
-                <label htmlFor="repository-url" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="repository-url"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Repository URL
                 </label>
                 <div className="relative">
@@ -95,7 +98,10 @@ export const AddRepositoryModal = ({
               </div>
 
               <div>
-                <label htmlFor="repository-language" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="repository-language"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Programming Language
                 </label>
                 <select
