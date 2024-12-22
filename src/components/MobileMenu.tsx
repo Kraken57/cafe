@@ -17,22 +17,22 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   const navigate = useNavigate();
 
   const handleNavigation = (path: string) => {
-    if (path === "/") {
+    if (path === "/cafe") {
       navigate(path);
     } else {
-      navigate("/repositories");
+      navigate("/cafe/repositories");
     }
     onClose();
   };
 
   const menuItems = [
-    { icon: Home, label: "Repositories", path: "/repositories" },
-    { icon: Code, label: "AI Code Review", path: "/code-review" },
-    { icon: Cloud, label: "Cloud Security", path: "/security" },
-    { icon: Book, label: "How to Use", path: "/guide" },
-    { icon: Gear, label: "Settings", path: "/settings" },
-    { icon: Help, label: "Support", path: "/support" },
-    { icon: Logout, label: "Logout", path: "/" },
+    { icon: Home, label: "Repositories", path: "/cafe/repositories" },
+    { icon: Code, label: "AI Code Review", path: "/cafe/code-review" },
+    { icon: Cloud, label: "Cloud Security", path: "/cafe/security" },
+    { icon: Book, label: "How to Use", path: "/cafe/guide" },
+    { icon: Gear, label: "Settings", path: "/cafe/settings" },
+    { icon: Help, label: "Support", path: "/cafe/support" },
+    { icon: Logout, label: "Logout", path: "/cafe/" },
   ];
 
   return (

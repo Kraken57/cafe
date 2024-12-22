@@ -5,7 +5,7 @@ import Home from "../assets/home.svg";
 import Code from "../assets/code.svg";
 import Cloud from "../assets/cloud.svg";
 import Book from "../assets/book.svg";
-import Gear from "../assets/gear.svg";
+import Gear from "../assets/gear.svg";  
 import Help from "../assets/help.svg";
 import Logout from "../assets/logout.svg";
 
